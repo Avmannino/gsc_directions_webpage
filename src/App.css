@@ -1,0 +1,1076 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --navy: #102b59;
+  --navy-dark: #071b3b;
+  --navy-deep: #04152f;
+
+  --red: #e51837;
+  --red-dark: #c80e2b;
+
+  --white: #ffffff;
+  --off-white: #f6f7f9;
+  --ice: #edf2f7;
+  --line: #d9e0e8;
+
+  --text: #172033;
+  --text-soft: #647084;
+
+  --content-width: 1440px;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.directions-page {
+  width: 100%;
+  overflow: hidden;
+  background: var(--white);
+  color: var(--text);
+}
+
+.content-width {
+  width: min(calc(100% - 64px), var(--content-width));
+  margin: 0 auto;
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 11px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+
+  color: var(--red);
+}
+
+.section-eyebrow--light {
+  color: #ff5770;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 15%,
+      rgba(255, 255, 255, 0.07),
+      transparent 22%
+    ),
+    linear-gradient(125deg, var(--navy-dark) 0%, var(--navy) 100%);
+
+  color: var(--white);
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  right: -120px;
+  top: -150px;
+
+  width: 520px;
+  height: 520px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  right: 80px;
+  top: -90px;
+
+  width: 380px;
+  height: 380px;
+
+  border: 1px solid rgba(255, 255, 255, 0.045);
+  border-radius: 50%;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  width: min(calc(100% - 64px), var(--content-width));
+  min-height: 440px;
+
+  margin: 0 auto;
+  padding: 92px 0 82px;
+}
+
+.hero__copy {
+  max-width: 680px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(4.6rem, 7vw, 7.4rem);
+  font-weight: 400;
+
+  line-height: 0.86;
+  letter-spacing: 0.015em;
+
+  color: var(--white);
+}
+
+.hero__description {
+  max-width: 720px;
+
+  margin: 27px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.13rem);
+  font-weight: 400;
+
+  line-height: 1.72;
+
+  color: rgba(255, 255, 255, 0.77);
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.address__icon {
+  display: grid;
+  flex: 0 0 auto;
+
+  width: 48px;
+  height: 48px;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.inline-icon {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.address__label,
+.address__street {
+  display: block;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.address__label {
+  margin-bottom: 3px;
+
+  font-size: 0.77rem;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.address__street {
+  font-size: 0.98rem;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  color: var(--white);
+}
+
+/* =========================================
+   HERO DECORATIVE MARK
+========================================= */
+
+.hero__accent {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 240px;
+  height: 90px;
+
+  margin: 0 20px 16px 0;
+}
+
+.hero__accent-line {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  width: 240px;
+  height: 2px;
+
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.hero__accent-dot {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+
+  width: 17px;
+  height: 17px;
+
+  transform: translateY(-50%);
+
+  border: 3px solid var(--red);
+  border-radius: 50%;
+
+  background: var(--navy);
+  box-shadow: 0 0 0 8px rgba(229, 24, 55, 0.08);
+}
+
+/* =========================================
+   MAP / LOCATION
+========================================= */
+
+.location-section {
+  position: relative;
+
+  padding: 88px 0;
+
+  background: var(--off-white);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(340px, 0.65fr);
+  gap: 55px;
+
+  align-items: center;
+}
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-panel {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 530px;
+
+  border-radius: 3px;
+
+  background: #dfe5eb;
+
+  box-shadow:
+    0 24px 60px rgba(7, 27, 59, 0.12),
+    0 3px 10px rgba(7, 27, 59, 0.06);
+}
+
+.map {
+  display: block;
+
+  width: 100%;
+  height: 530px;
+
+  border: 0;
+}
+
+.map-overlay {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: calc(100% - 48px);
+
+  padding: 18px 21px;
+
+  border-left: 4px solid var(--red);
+
+  background: rgba(7, 27, 59, 0.94);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+
+  color: var(--white);
+}
+
+.map-overlay__eyebrow {
+  margin-bottom: 4px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #ff5a73;
+}
+
+.map-overlay strong {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.map-overlay > span:last-child {
+  margin-top: 3px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.77rem;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+/* =========================================
+   ARRIVAL PANEL
+========================================= */
+
+.arrival-panel {
+  padding: 15px 0;
+}
+
+.arrival-panel h2,
+.section-heading h2,
+.final-location h2 {
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+}
+
+.arrival-panel h2 {
+  max-width: 460px;
+
+  font-size: clamp(3.1rem, 4vw, 4.5rem);
+
+  color: var(--navy-dark);
+}
+
+.arrival-panel > p {
+  margin: 23px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.98rem;
+
+  line-height: 1.75;
+
+  color: var(--text-soft);
+}
+
+/* =========================================
+   MAP BUTTONS
+========================================= */
+
+.map-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  margin-top: 30px;
+}
+
+.map-button {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 13px;
+
+  align-items: center;
+
+  min-height: 58px;
+
+  padding: 0 19px;
+
+  border: 1px solid transparent;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.035em;
+
+  text-decoration: none;
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.map-button:hover {
+  transform: translateX(4px);
+}
+
+.map-button--primary {
+  background: var(--red);
+  color: var(--white);
+}
+
+.map-button--primary:hover {
+  background: var(--red-dark);
+}
+
+.map-button--secondary {
+  border-color: #cbd3de;
+
+  background: transparent;
+
+  color: var(--navy-dark);
+}
+
+.map-button--secondary:hover {
+  border-color: var(--navy);
+  background: var(--white);
+}
+
+.button-icon,
+.button-arrow {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.button-arrow {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================
+   ARRIVAL NOTE
+========================================= */
+
+.arrival-note {
+  position: relative;
+
+  margin-top: 30px;
+  padding: 21px 0 0 20px;
+}
+
+.arrival-note__line {
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 2px;
+
+  width: 2px;
+
+  background: var(--red);
+}
+
+.arrival-note p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.81rem;
+
+  line-height: 1.7;
+
+  color: var(--text-soft);
+}
+
+.arrival-note strong {
+  color: var(--navy-dark);
+}
+
+/* =========================================
+   ROUTES SECTION
+========================================= */
+
+.route-section {
+  padding: 100px 0 110px;
+
+  background: var(--white);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  font-size: clamp(3.4rem, 5vw, 5.3rem);
+
+  color: var(--navy-dark);
+}
+
+.section-heading > p {
+  max-width: 460px;
+
+  margin: 0 0 6px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: var(--text-soft);
+}
+
+/* =========================================
+   DIRECTION CARDS
+========================================= */
+
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.direction-card {
+  padding: 38px 40px 42px;
+
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  background: var(--white);
+
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.direction-card:hover {
+  position: relative;
+  z-index: 2;
+
+  transform: translateY(-3px);
+
+  background: #fbfcfd;
+
+  box-shadow: 0 16px 40px rgba(7, 27, 59, 0.09);
+}
+
+.direction-card__top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-height: 64px;
+}
+
+.direction-card__icon-wrap {
+  display: grid;
+  flex: 0 0 auto;
+
+  width: 52px;
+  height: 52px;
+
+  place-items: center;
+
+  background: var(--navy-dark);
+
+  color: var(--white);
+}
+
+.direction-icon {
+  width: 24px;
+  height: 24px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.direction-card__heading {
+  flex: 1 1 auto;
+}
+
+.direction-card__eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.61rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: var(--red);
+}
+
+.direction-card h3 {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: var(--navy-dark);
+}
+
+.exit-badge {
+  flex: 0 0 auto;
+
+  padding: 10px 14px;
+
+  border: 1px solid #006747;
+  background: #006747;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+/* =========================================
+   STEP LIST
+========================================= */
+
+.direction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin: 30px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.direction-list li {
+  display: grid;
+  grid-template-columns: 27px 1fr;
+  gap: 12px;
+
+  align-items: start;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+
+  line-height: 1.65;
+
+  color: var(--text-soft);
+}
+
+.step-number {
+  display: grid;
+
+  width: 25px;
+  height: 25px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #edf1f6;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: var(--navy);
+}
+
+/* =========================================
+   FINAL DESTINATION
+========================================= */
+
+.final-location {
+  position: relative;
+  overflow: hidden;
+
+  padding: 69px 0;
+
+  background: var(--navy-dark);
+
+  color: var(--white);
+}
+
+.final-location::after {
+  content: "";
+
+  position: absolute;
+  right: -160px;
+  top: 50%;
+
+  width: 420px;
+  height: 420px;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 50%;
+}
+
+.final-location__inner {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 26px;
+
+  align-items: center;
+}
+
+.final-location__marker {
+  display: grid;
+
+  width: 72px;
+  height: 72px;
+
+  place-items: center;
+
+  background: var(--red);
+
+  color: var(--white);
+}
+
+.final-location__marker .inline-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.final-location h2 {
+  font-size: clamp(2.8rem, 4vw, 4rem);
+
+  color: var(--white);
+}
+
+.final-location__copy p {
+  margin: 4px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.final-location__button {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  min-height: 55px;
+
+  padding: 0 20px 0 23px;
+
+  background: var(--red);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: var(--white);
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.final-location__button:hover {
+  transform: translateY(-2px);
+
+  background: var(--red-dark);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .hero__accent {
+    display: none;
+  }
+
+  .location-grid {
+    grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.7fr);
+    gap: 38px;
+  }
+
+  .direction-card {
+    padding: 34px 30px 38px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-width,
+  .hero__inner {
+    width: min(calc(100% - 44px), var(--content-width));
+  }
+
+  .hero__inner {
+    min-height: 385px;
+
+    padding: 72px 0 67px;
+  }
+
+  .location-section {
+    padding: 64px 0 72px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .arrival-panel {
+    max-width: 670px;
+  }
+
+  .map-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .route-section {
+    padding: 78px 0 86px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 19px;
+  }
+
+  .directions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-location__inner {
+    grid-template-columns: auto 1fr;
+  }
+
+  .final-location__button {
+    grid-column: 2;
+
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-width,
+  .hero__inner {
+    width: min(calc(100% - 32px), var(--content-width));
+  }
+
+  .hero__inner {
+    min-height: auto;
+
+    padding: 61px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 19vw, 5.6rem);
+  }
+
+  .hero__description {
+    margin-top: 22px;
+
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .address {
+    align-items: flex-start;
+
+    margin-top: 28px;
+  }
+
+  .address__icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .address__street {
+    font-size: 0.86rem;
+  }
+
+  .location-section {
+    padding: 46px 0 57px;
+  }
+
+  .map-panel,
+  .map {
+    min-height: 390px;
+    height: 390px;
+  }
+
+  .map-overlay {
+    left: 14px;
+    bottom: 14px;
+
+    max-width: calc(100% - 28px);
+
+    padding: 15px 16px;
+  }
+
+  .map-overlay strong {
+    font-size: 0.82rem;
+  }
+
+  .map-overlay > span:last-child {
+    font-size: 0.69rem;
+  }
+
+  .arrival-panel .section-eyebrow,
+  .arrival-panel h2 {
+    text-align: center;
+  }
+
+  .arrival-panel h2 {
+    font-size: 2.3rem;
+  }
+
+  .map-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .route-section {
+    padding: 30px 0 65px;
+  }
+
+  .section-heading {
+    margin-bottom: 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 3.4rem;
+  }
+
+  .directions-grid {
+    border-left: 0;
+  }
+
+  .direction-card {
+    padding: 18px 0 20px;
+
+    border-right: 0;
+  }
+
+  .direction-card:hover {
+    transform: none;
+
+    background: var(--white);
+
+    box-shadow: none;
+  }
+
+  .direction-card__top {
+    gap: 13px;
+  }
+
+  .direction-card__icon-wrap {
+    width: 47px;
+    height: 47px;
+  }
+
+  .direction-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .exit-badge {
+    padding: 12px 16px;
+
+    font-size: 1.08rem;
+  }
+
+  .direction-list {
+    gap: 14px;
+
+    margin-top: 25px;
+  }
+
+  .direction-list li {
+    font-size: 0.92rem;
+  }
+
+  .final-location {
+    padding: 50px 0;
+  }
+
+  .final-location__inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .final-location__marker {
+    width: 56px;
+    height: 56px;
+  }
+
+  .final-location__marker .inline-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .final-location__button {
+    grid-column: auto;
+
+    justify-self: stretch;
+    justify-content: space-between;
+
+    margin-top: 8px;
+  }
+}
