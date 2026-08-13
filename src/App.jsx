@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./Footer";
 
 const CLUB_ADDRESS = "9 Cardinal Road, Greenwich, CT 06830";
 
@@ -154,8 +155,9 @@ function DirectionCard({ highway, direction, exit, steps, number }) {
 
 function App() {
   return (
-    <main className="directions-page">
-      <section className="hero">
+    <>
+      <main className="directions-page">
+        <section className="hero">
         <div className="hero__inner">
           <div className="hero__copy">
             <h1>Directions to the Club</h1>
@@ -267,7 +269,10 @@ function App() {
         </div>
       </section>
 
-    </main>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 
