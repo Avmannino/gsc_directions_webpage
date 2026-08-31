@@ -181,9 +181,9 @@
 
   width:
     clamp(
-      132px,
-      10vw,
-      172px
+      108px,
+      8vw,
+      140px
     );
 
   margin-left: 20px;
@@ -282,6 +282,9 @@
 .footer-menu__group-arrow {
   display: inline-flex;
   flex: 0 0 auto;
+
+  color:
+    var(--footer-red);
 
   transform:
     rotate(90deg);
@@ -398,10 +401,6 @@
 
   margin-top: 27px;
   padding-top: 40px;
-
-  border-top:
-    1px solid
-    var(--footer-line);
 }
 
 .footer-connect__info {
@@ -722,7 +721,7 @@
   }
 
   .footer-logo {
-    width: 138px;
+    width: 112px;
   }
 
   .footer-menu__groups {
@@ -789,7 +788,7 @@
     position: relative;
     left: -8px;
 
-    width: 110px;
+    width: 90px;
 
     margin: 0 auto;
   }
