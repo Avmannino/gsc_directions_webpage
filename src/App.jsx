@@ -160,6 +160,12 @@ function App() {
         <section className="hero">
         <div className="hero__inner">
           <div className="hero__copy">
+            <img
+              className="hero__logo"
+              src={`${import.meta.env.BASE_URL}gsc-logo.png`}
+              alt="Greenwich Skating Club"
+            />
+
             <h1>Directions to the Club</h1>
 
             <p className="hero__description">

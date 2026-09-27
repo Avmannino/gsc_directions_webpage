@@ -129,6 +129,15 @@
   max-width: 680px;
 }
 
+.hero__logo {
+  display: block;
+
+  width: auto;
+  height: 120px;
+
+  margin: 0 0 28px;
+}
+
 .hero h1 {
   margin: 0;
 
@@ -922,6 +931,12 @@
     min-height: auto;
 
     padding: 61px 0 56px;
+  }
+
+  .hero__logo {
+    height: 88px;
+
+    margin-bottom: 22px;
   }
 
   .hero h1 {
