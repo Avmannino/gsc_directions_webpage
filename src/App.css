@@ -934,9 +934,9 @@
   }
 
   .hero__logo {
-    height: 88px;
+    height: 112px;
 
-    margin-bottom: 22px;
+    margin: 0 auto 22px;
   }
 
   .hero h1 {
