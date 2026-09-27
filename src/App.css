@@ -936,7 +936,7 @@
   .hero__logo {
     height: 112px;
 
-    margin: 0 auto 22px;
+    margin-bottom: 22px;
   }
 
   .hero h1 {
